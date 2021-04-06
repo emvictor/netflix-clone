@@ -1,9 +1,15 @@
 import Link from "next/link";
+import Head from "next/head";
+
+import { Header } from "containers";
 
 export default function Hello() {
   return (
-    <Link href="/">
-      <p>Hello</p>
-    </Link>
+    <>
+      <Head>
+        <title>Browse</title>
+      </Head>
+      <Header />
+    </>
   );
 }
