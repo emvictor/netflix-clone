@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Link } from "../components";
-import { Jumbotron, Footer, AccordionFaqs } from "../containers";
+import { Jumbotron, Footer, AccordionFaqs, Header } from "../containers";
 
 export default function Home() {
   return (
@@ -8,6 +7,10 @@ export default function Home() {
       <Head>
         <title>Netflix</title>
       </Head>
+      <Header>
+        <Jumbotron />
+        <AccordionFaqs />
+      </Header>
       <Jumbotron />
       <AccordionFaqs />
       <Footer />
