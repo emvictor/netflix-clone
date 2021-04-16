@@ -1,7 +1,7 @@
-import { Accordion, OptForm } from "../components";
+import { Accordion } from "../components";
 import faqsData from "../fixtures/faq.json";
 
-export default function FaqsContainer() {
+export default function FaqsContainer({ children}) {
   return (
     <Accordion>
       <Accordion.Title>Frequently Asked Questions</Accordion.Title>
@@ -12,14 +12,7 @@ export default function FaqsContainer() {
         </Accordion.Item>
       ))}
       <Accordion.Item />
-      <OptForm>
-        <OptForm.Input placeholer="Email Address" />
-        <OptForm.Button>Try it now</OptForm.Button>
-        <OptForm.Break />
-        <OptForm.Text>
-          Ready to watch? Enter your email to create or restart your membership.
-        </OptForm.Text>
-      </OptForm>
+      {children}
     </Accordion>
   );
 }
